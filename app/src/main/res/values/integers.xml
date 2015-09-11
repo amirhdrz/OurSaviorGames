@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Google play services version -->
+
+    <!-- minimum amount of play time in milliseconds for a game launch to count as a game play -->
+    <integer name="game_play_threshold_ms">30000</integer>
+
+    <!--
+        minimum amount of time in milliseconds to elapse before fetching game list again from server.
+        10800000
+    -->
+    <integer name="game_list_fetch_wait_time">5000</integer>
+
+    <!--
+        minimum amount of time to wait in milliseconds before refreshing spotlight game.
+        current value: 1 day.
+        86400000
+    -->
+    <integer name="spotlight_game_fetch_wait_time">86400000</integer>
+
+    <!-- Amount of time in milli-seconds to keep a fake comment in the database
+        currently 5 minutes
+    -->
+    <integer name="time_to_keep_fake_comment">300000</integer>
+
+</resources>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:auto_start="true"
+        app:duration="1600"
+        app:repeat_delay="800"
+        app:base_alpha="0.88"
+        app:repeat_mode="restart"
+        app:repeat_count="-1"
+        app:shape="linear"
+        app:angle="cw_0"
+        app:dropoff="0.4"
+        app:intensity="0.1"
+        >
+
+        <ImageView
+            android:src="@drawable/ic_moonrise_72dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            />
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <com.oursaviorgames.android.ui.widget.RoboTextView
+        android:id="@+id/title"
+        app:fontStyle="ocr_b"
+        android:text="@string/our_savior_games"
+        android:textSize="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="28dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.oursaviorgames.android.ui.widget.RoboTextView
+        android:id="@+id/version"
+        app:fontStyle="ocr_b"
+        android:text="Version 0.2.0.2 Beta"
+        android:textAllCaps="true"
+        android:textSize="10dp"
+        android:textColor="@color/menuCategoryTitleColor"
+        android:layout_below="@id/title"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"/>
+
+    <View
+        android:id="@+id/divider"
+        android:background="@color/dividerColor"
+        android:layout_marginTop="184dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        />
+
+    <com.oursaviorgames.android.ui.widget.RoboTextView
+        android:id="@+id/tosButton"
+        style="@style/roundedButtonStyle"
+        android:text="@string/terms_of_service"
+        app:fontStyle="medium"
+        android:layout_below="@id/divider"
+        android:layout_marginTop="64dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <com.oursaviorgames.android.ui.widget.RoboTextView
+        android:id="@+id/privacyPolicyButton"
+        style="@style/roundedButtonStyle"
+        android:text="@string/privacy_policy"
+        app:fontStyle="medium"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/tosButton"
+        />
+
+    <com.oursaviorgames.android.ui.widget.RoboTextView
+        android:id="@+id/licencesButton"
+        style="@style/roundedButtonStyle"
+        android:text="@string/licenses"
+        app:fontStyle="medium"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/privacyPolicyButton"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/listView"
+        style="@style/GameListViewStyle"
+        android:footerDividersEnabled="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <com.oursaviorgames.android.external.materialishprogress.Spinner
+        android:id="@+id/emptyView"
+        app:size="large"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.oursaviorgames.android.ui.widget.FloatingActionButton
+        android:id="@+id/randomButton"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="bottom|end"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        />
+
+</FrameLayout>

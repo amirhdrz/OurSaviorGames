@@ -1,0 +1,118 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <item name="android:windowBackground">@color/primary</item>
+
+        <item name="windowActionModeOverlay">true</item> <!-- Support library compatibility -->
+        <item name="android:windowActionModeOverlay">true</item>
+
+        <item name="android:textColor">@color/text_light</item>
+
+        <item name="colorAccent">@color/accent</item>
+        <item name="colorPrimary">@color/primary</item>
+
+        <item name="colorControlNormal">@color/accent</item>
+        <item name="colorControlActivated">@color/accent</item>
+        <item name="colorControlHighlight">@color/accent</item>
+
+        <!-- Action Mode -->
+        <item name="actionModeStyle">@style/MyActionModeStyle</item>
+        <item name="android:actionModeStyle">@style/MyActionModeStyle</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_close_white_24dp</item>
+        <item name="android:actionModeSelectAllDrawable">@drawable/ic_select_all_white_24dp</item>
+        <item name="android:actionModeCutDrawable">@drawable/ic_content_cut_white_24dp</item>
+        <item name="android:actionModeCopyDrawable">@drawable/ic_content_copy_white_24dp</item>
+        <item name="android:actionModePasteDrawable">@drawable/ic_content_paste_white_24dp</item>
+
+        <item name="android:actionBarSize">@dimen/actionBarHeight</item>
+
+        <item name="android:windowContentOverlay">@null</item>
+
+        <item name="android:popupMenuStyle">@style/MyPopupMenuStyle</item>
+        <item name="popupMenuStyle">@style/MyPopupMenuStyle</item>
+
+        <item name="android:listSelector">@color/white</item>
+    </style>
+
+    <style name="MyPopupMenuStyle" parent="@style/Widget.AppCompat.PopupMenu">
+        <item name="android:background">@color/white</item>
+        <item name="background">@color/white</item>
+        <item name="android:popupBackground">@color/white</item>
+        <!--<item name="popupBackground">@color/white</item>-->
+    </style>
+
+    <style name="MyActionModeStyle" parent="Widget.AppCompat.ActionMode">
+        <item name="android:background">@color/primary</item>
+        <item name="background">@color/primary</item>
+    </style>
+
+    <!-- EditText with dark underline -->
+    <style name="DarkEditTextStyle">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.FullScreen" parent="AppTheme.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AppTheme.Dark.NoActionBar.FullScreen" parent="AppTheme.NoActionBar.FullScreen">
+        <item name="android:windowBackground">@color/black</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.Transparent">
+        <!--<item name="android:textColor">@color/black87</item>-->
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!-- Action button style -->
+    <style name="actionButtonStyle">
+        <item name="android:layout_width">@dimen/stdBtnSize</item>
+        <item name="android:layout_height">@dimen/stdBtnSize</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:paddingStart">@dimen/verticalKeyline</item>
+        <item name="android:paddingEnd">@dimen/verticalKeyline</item>
+        <item name="android:background">@drawable/action_button_background</item>
+    </style>
+
+    <!--  Game ListView style -->
+    <style name="myListViewStyle">
+        <item name="android:divider">@null</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+        <item name="android:overScrollFooter">@android:color/transparent</item>
+        <item name="android:footerDividersEnabled">false</item>
+    </style>
+
+    <style name="GameListViewStyle" parent="@style/myListViewStyle">
+        <item name="android:paddingBottom">32dp</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+
+    <style name="roundedButtonStyle">
+        <item name="android:textSize">@dimen/stdTextSize</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:background">@drawable/action_button_rounded_background</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- Game menu button style -->
+    <style name="gameMenuButtonStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:background">@drawable/circular_button_background</item>
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+    </style>
+
+</resources>

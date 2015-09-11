@@ -1,0 +1,114 @@
+/*
+ *Legacy
+ */
+
+.bg2 {
+	display: none !important;
+}
+
+/*
+ *Main
+ */
+
+body {
+	font-family: 'OCR';
+	font-size: 36px;
+	letter-spacing: 1px;
+	color: #fff;
+	text-align: center;
+}
+
+.bg {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	background: linear-gradient(270deg, #d6a4a4, #dae2f8);
+	background-size: 200% 200%;
+	-webkit-animation: gradient 15s linear infinite;
+	-moz-animation: gradient 15s linear infinite;
+	animation: gradient 15s linear infinite;
+}
+
+@-webkit-keyframes gradient {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@-moz-keyframes gradient {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@keyframes gradient { 
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+
+#particles-js {
+	height: 100%;
+	background: rgba(0,0,0,0);
+	z-index: 1;
+}
+
+.box {
+	position: absolute;
+	height: auto;
+	width: 100%;
+	top: 40%;
+}
+
+.text {
+	position: relative;
+	display: block;
+	width: auto;
+	height: auto;
+	background-color: rgba(0,0,0,0);
+}
+
+.links {
+	width: 100%;
+}
+
+.btn-outlined {
+    border-radius: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    font-family: 'OCR';
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-top: 32px;
+}
+
+.btn-outlined.btn-primary {
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn-outlined.btn-primary:hover,
+.btn-outlined.btn-primary:active {
+    color: #211e1e;
+    background: #fff;
+    border-color: #fff;
+}
+
+a, a:link, a:visited,
+a:hover, a:active {
+	text-decoration: none;
+}
+
+/*
+ *OCR Font
+ */
+
+@font-face {
+	font-family: 'OCR';
+	src: url('../web_assets/OCRB.ttf');
+}

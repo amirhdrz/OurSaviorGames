@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:background="@color/white"
+              android:orientation="vertical"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingRight="@dimen/activity_horizontal_margin"
+              android:paddingTop="@dimen/activity_vertical_margin"
+              android:paddingBottom="@dimen/activity_vertical_margin"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/feedback_input_email"
+        style="@style/DarkEditTextStyle"
+        android:inputType="textEmailAddress"
+        android:imeOptions="actionNext"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:hint="@string/feedback_email_hint"
+        android:textColorHint="@color/black26"
+        android:textSize="16dp"
+        android:textCursorDrawable="@drawable/text_cursor_black"
+        android:textColor="@color/black87"
+        android:layout_marginBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/feedback_input_msg"
+        style="@style/DarkEditTextStyle"
+        android:inputType="textAutoCorrect|textMultiLine"
+        android:hint="@string/feedback_msg_hint"
+        android:textColorHint="@color/black26"
+        android:textSize="16dp"
+        android:textColor="@color/black87"
+        android:textCursorDrawable="@drawable/text_cursor_black"
+        android:singleLine="false"
+        android:maxLength="2500"
+        android:gravity="top|start"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+
+</LinearLayout>

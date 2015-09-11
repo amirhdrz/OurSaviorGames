@@ -1,0 +1,67 @@
+// If you would like more information on the gradle-appengine-plugin please refer to the github page
+// https://github.com/GoogleCloudPlatform/gradle-appengine-plugin
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.google.appengine:gradle-appengine-plugin:1.9.18'
+    }
+}
+
+repositories {
+    mavenCentral();
+}
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'appengine'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+dependencies {
+    // Main AppEngine libraries
+    appengineSdk 'com.google.appengine:appengine-java-sdk:1.9.18'
+    compile 'com.google.appengine:appengine-endpoints:1.9.18'
+    compile 'com.google.appengine:appengine-endpoints-deps:1.9.18'
+    compile 'com.google.appengine:appengine-api-labs:1.9.18'
+    compile 'com.googlecode.objectify:objectify:5.1.5'
+    compile 'com.google.http-client:google-http-client:1.19.0'
+    compile 'com.google.http-client:google-http-client-appengine:1.19.0'
+    compile 'com.google.http-client:google-http-client-jackson:1.19.0'
+    compile 'com.google.appengine.tools:appengine-gcs-client:0.4.4'
+    compile 'javax.servlet:servlet-api:2.5'
+
+    // Google Guava
+    compile 'com.google.guava:guava:18.0'
+
+    // User agent detector
+    compile 'net.sf.uadetector:uadetector-resources:2014.04'
+
+    // AppEngine testing
+    testCompile 'com.google.appengine:appengine-api-labs:1.9.17'
+    testCompile 'com.google.appengine:appengine-api-stubs:1.9.17'
+    testCompile 'com.google.appengine:appengine-testing:1.9.8'
+    testCompile 'com.google.appengine:appengine-testing:1.9.17'
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.easymock:easymock:3.3.1'
+
+}
+
+appengine {
+    downloadSdk = true
+    appcfg {
+        oauth2 = true
+        // TODO: insert email
+    }
+    endpoints {
+        getClientLibsOnBuild = true
+        getDiscoveryDocsOnBuild = true
+    }
+}
+
+appengineUpdate {
+        useJava7 true
+}

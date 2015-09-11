@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="horizontal"
+              android:paddingTop="@dimen/gridSize"
+              android:paddingBottom="@dimen/gridSize"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingRight="@dimen/activity_horizontal_margin"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <com.oursaviorgames.android.ui.widget.CircularImageView
+        android:id="@+id/profileImageView"
+        app:foregroundColor="@color/white"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginLeft="16dp"
+        >
+
+        <com.oursaviorgames.android.ui.widget.RoboTextView
+            android:id="@+id/commentTextView"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.oursaviorgames.android.ui.widget.RoboTextView
+            android:id="@+id/timestampTextView"
+            android:textColor="@color/black20"
+            android:layout_marginTop="@dimen/gridSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

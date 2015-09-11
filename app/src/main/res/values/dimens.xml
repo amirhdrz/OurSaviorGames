@@ -1,0 +1,51 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Standard values -->
+    <dimen name="margin_xs">4dp</dimen>
+    <dimen name="margin_s">8dp</dimen>
+    <dimen name="margin_m">16dp</dimen>
+    <dimen name="margin_l">36dp</dimen>
+
+    <dimen name="padding_m">12dp</dimen>
+
+    <dimen name="font_h1">36dp</dimen>
+    <dimen name="font_h2">24sp</dimen>
+    <dimen name="font_h3">20sp</dimen>
+    <dimen name="font_h4">16sp</dimen>
+    <dimen name="font_h5">14sp</dimen>
+    <dimen name="font_h6">12sp</dimen>
+
+    <dimen name='std_height_m'>48dp</dimen>
+    <dimen name="std_height_s">36dp</dimen>
+
+    <dimen name="corner_radius">4dp</dimen>
+    <dimen name="stroke_width">8dp</dimen>
+
+    <!-- Dashboard dimensions -->
+    <dimen name="title_margin_below">25dp</dimen>
+    <dimen name="dashboard_padding">28dp</dimen>
+    <dimen name="dashboard_item_margin">8dp</dimen>
+    <dimen name="dashboardCircleSize">@dimen/std_height_m</dimen>
+
+    <!-- Toolbar dimensions -->
+    <dimen name="actionBarHeight">56dp</dimen>
+    <dimen name="actionBarTextSize">@dimen/font_h2</dimen>
+
+    <!-- NEW DIMENSIONS, only use the ones below -->
+    <!-- Global dimensions -->
+    <dimen name="fragment_vertical_margin">32dp</dimen>
+    <dimen name="gridSize">8dp</dimen>
+    <dimen name="stdTextSize">14dp</dimen>
+    <dimen name="stdBtnSize">48dp</dimen>
+    <dimen name="toolbarHeight">56dp</dimen>
+    <dimen name="toolbarTextSize">20dp</dimen>
+    <dimen name="verticalKeyline">16dp</dimen>
+    <dimen name="contentVerticalKeyline">72dp</dimen>
+
+    <!-- Buttons -->
+    <dimen name="button_horizontal_padding">24dp</dimen>
+
+</resources>

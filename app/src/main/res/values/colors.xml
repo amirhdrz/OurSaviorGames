@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- shades of black -->
+    <color name="black45">#73000000</color>
+    <color name="black26">#43000000</color>
+    <color name="black20">#33000000</color>
+
+    <color name="white45">#73ffffff</color>
+
+    <color name="text_light_translucent">@color/white45</color>
+    <color name="text_light">@color/white</color>
+
+
+    <!-- NEW COLORS, only use the colors below for the new layout. -->
+    <!-- Text colors -->
+    <color name="white">#ffffff</color>
+    <color name="paleWhite">#b3ffffff</color> <!-- 30% alpha -->
+    <color name="black">#000000</color>
+    <color name="black87">#df000000</color>
+
+    <color name="primary">#3d3737</color>
+    <color name="primaryDark">#211e1e</color>
+    <color name="accent">#2d2929</color> <!-- Darkhighlight on top of primary -->
+    <color name="accentPressed">#1c1717</color> <!-- Darkened accent color when a view is pressed -->
+    <color name="accentBlue">#7e9ae7</color>
+    <color name="accentRed">#f78383</color>
+    <color name="actionModeBackground">@color/accent</color>
+    <color name="darkHighlight">#42000000</color> <!-- 26% alpha -->
+    <color name="shadow">#8c000000</color> <!-- 54% alpha -->
+    <color name="blue">#2196f3</color>
+    <color name="red">#F44336</color>
+    <color name="green">#4CAF50</color>
+
+    <!-- Cropper colors -->
+    <color name="cropperBackground">#de211e1e</color>
+
+    <!-- Custom view colors -->
+    <color name="dividerColor">#1f000000</color>
+    <color name="starBackground">@color/primaryDark</color>
+    <color name="whiteSpinnerColor">#c0ffffff</color> <!-- 75% alpha -->
+    <color name="switchButtonDefaultTextColor">#b4ffffff</color>
+    <color name="menuCategoryTitleColor">#4dffffff</color>
+
+</resources>

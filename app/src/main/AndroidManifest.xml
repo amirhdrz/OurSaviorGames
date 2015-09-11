@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.oursaviorgames.android" >
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+    <compatible-screens>
+
+        <screen android:screenSize="normal" android:screenDensity="hdpi" />
+        <screen android:screenSize="normal" android:screenDensity="xhdpi" />
+        <screen android:screenSize="normal" android:screenDensity="480" />
+        <screen android:screenSize="normal" android:screenDensity="640" />
+
+        <screen android:screenSize="large" android:screenDensity="hdpi" />
+        <screen android:screenSize="large" android:screenDensity="xhdpi" />
+        <screen android:screenSize="large" android:screenDensity="480" />
+        <screen android:screenSize="large" android:screenDensity="640" />
+
+    </compatible-screens>
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme" >
+
+        <!-- Crashlytics API Key -->
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="INSERT_KEY_HERE" />
+
+        <!-- Facebook App Id -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <!-- Google Play Services version -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- Activities -->
+        <activity
+            android:name="com.oursaviorgames.android.ui.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.oursaviorgames.android.ui.GameLoaderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <data android:scheme="http"
+                      android:host="oursaviorgames.com"
+                      android:pathPrefix="/play"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.oursaviorgames.android.ui.GameActivity"
+            android:theme="@style/AppTheme.Dark.NoActionBar.FullScreen" >
+        </activity>
+        <activity
+            android:name="com.oursaviorgames.android.ui.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.oursaviorgames.android.ui.ProfileActivity"
+            android:parentActivityName="com.oursaviorgames.android.ui.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.oursaviorgames.android.ui.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.oursaviorgames.android.ui.FeedbackActivity"
+            android:label="@string/title_activity_feedback"
+            android:parentActivityName="com.oursaviorgames.android.ui.MainActivity"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.oursaviorgames.android.ui.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.oursaviorgames.android.ui.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:parentActivityName="com.oursaviorgames.android.ui.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.oursaviorgames.android.ui.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.oursaviorgames.android.ui.CropperActivity"
+            android:label="@string/title_activity_cropper"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Dark.NoActionBar.FullScreen" >
+        </activity>
+        <activity
+            android:name="com.oursaviorgames.android.ui.CommentActivity"
+            android:label="@string/title_activity_comment"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.Transparent"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:parentActivityName="com.oursaviorgames.android.ui.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.oursaviorgames.android.ui.MainActivity" />
+        </activity>
+        <!-- Facebook login Activity -->
+        <activity
+            android:name="com.facebook.LoginActivity"
+            android:label="@string/title_facebook_login" >
+        </activity>
+
+        <!-- Content Providers -->
+        <provider
+            android:name="com.oursaviorgames.android.data.GameProvider"
+            android:authorities="${applicationId}.GameProvider"
+            android:exported="false" />
+        <provider
+            android:name="com.oursaviorgames.android.data.UserDataProvider"
+            android:authorities="${applicationId}.UserDataProvider"
+            android:exported="false" />
+
+        <!-- Services -->
+
+        <service
+            android:name="com.oursaviorgames.android.backend.RoboService"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

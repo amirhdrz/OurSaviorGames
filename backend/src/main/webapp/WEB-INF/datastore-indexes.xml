@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<datastore-indexes autoGenerate="false">
+
+    <datastore-index kind="Game" ancestor="false" source="manual">
+        <property name="EF_IsPublished" direction="asc"/>
+        <property name="EF_DatePublished" direction="desc"/>
+    </datastore-index>
+
+    <datastore-index kind="Game" ancestor="false" source="manual">
+        <property name="EF_IsPublished" direction="asc"/>
+        <property name="EF_HotScore" direction="desc"/>
+    </datastore-index>
+
+    <datastore-index kind="Comment" ancestor="false" source="manual">
+        <property name="EF_Game" direction="asc" />
+        <property name="EF_Timestamp" direction="desc" />
+    </datastore-index>
+
+    <datastore-index kind="UserProfile" ancestor="false" source="manual">
+        <property name="EF_IdentityProvider" direction="asc" />
+        <property name="EF_IdentityProviderUserId" direction="asc" />
+    </datastore-index>
+
+    <datastore-index kind="PlayToken" ancestor="false" source="manual">
+        <property name="EF_Counted" direction="asc" />
+        <property name="EF_GameId" direction="asc" />
+    </datastore-index>
+
+</datastore-indexes>

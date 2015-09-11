@@ -1,0 +1,139 @@
+/*
+ *Legacy
+ */
+
+.bg {
+	display: none !important;
+}
+
+/*
+ *Main
+ */
+
+body {
+	font-family: 'OCR';
+	color: #211e1e;
+	text-align: center;
+}
+
+.bg2 {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	overflow: auto;
+	background: -webkit-linear-gradient(135deg, #DAE2F8 10%, #D6A4A4 90%); /* Chrome 10+, Saf5.1+ */
+	background:    -moz-linear-gradient(135deg, #DAE2F8 10%, #D6A4A4 90%); /* FF3.6+ */
+	background:     -ms-linear-gradient(135deg, #DAE2F8 10%, #D6A4A4 90%); /* IE10 */
+	background:      -o-linear-gradient(135deg, #DAE2F8 10%, #D6A4A4 90%); /* Opera 11.10+ */
+	background:         linear-gradient(135deg, #DAE2F8 10%, #D6A4A4 90%); /* W3C */
+}
+
+.box2 {
+	position: absolute;
+	width: 100%;
+	height: auto;
+	margin-top: 15%;
+	margin-bottom: 15%;
+}
+
+#moonrise-container {
+	position: relative;
+	background-color: rgba(33,30,30,1);
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+
+#moonrise {
+	position: relative;
+	width: 90px;
+	height: 90px;
+	top: 15px;
+	margin: 0 auto;
+}
+
+.text {
+	padding-top: 8%;
+	padding-left: 5%;
+	padding-right: 5%;
+	text-align: center;
+}
+
+.titular {
+	line-height: 1.5;
+	margin-top: 0px;
+}
+
+.desc {
+	color: rgba(33,30,30,0.75);
+	font-size: 18px;
+
+}
+
+.btn-outlined {
+	display: table;
+    border-radius: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    font-family: 'OCR';
+    font-size: 18px;
+    margin-top: 5%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+i {
+	padding-right: 12px;
+	color: #211e1e;
+}
+
+.btn-outlined.btn-primary {
+    background: none;
+    border: 2px solid rgba(33,30,30,0);
+    color: rgba(33,30,30,0.75);
+}
+
+.btn-outlined.btn-primary:hover,
+.btn-outlined.btn-primary:active {
+    color: #211e1e;
+    background: none;
+    border-color: #211e1e;
+}
+
+a, a:link, a:visited,
+a:hover, a:active {
+	text-decoration: none;
+}
+
+
+@media (orientation: landscape) {
+	.box2 {
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+	.text {
+		padding: 5% 10%;
+		text-align: center;
+	}
+	.btn-outlined {
+		display: inline-block;
+		margin-top: 12px;
+	}
+}
+
+
+/*
+ *OCR Font
+ */
+
+@font-face {
+	font-family: 'OCR';
+	src: url('../web_assets/OCRB.ttf');
+}

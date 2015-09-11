@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <declare-styleable name="TrapezoidView">
+        <attr name="edgeStyle" format="integer">
+            <flag name="left_vertical" value="0" />
+            <flag name="left_backward" value="4" />
+            <flag name="left_forward" value="8" />
+
+            <flag name="right_vertical" value="0" />
+            <flag name="right_backward" value="1" />
+            <flag name="right_forward" value="2" />
+        </attr>
+        
+        <attr name="contentBackground" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="RoboTextView">
+        <!-- Enum values should match typeface constants defined in UiUtils -->
+        <attr name="fontStyle" format="enum">
+            <enum name="thin" value="0" />
+            <enum name="light" value="1" />
+            <enum name="regular" value="2" />
+            <enum name="medium" value="3" />
+            <enum name="bold" value="4" />
+            <enum name="black" value="5" />
+            <enum name="ocr_a" value="6" />
+            <enum name="ocr_b" value="7" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ProgressBarSwitcher">
+        <attr name="spinnerSize" format="enum">
+            <enum name="large" value="0"/>
+            <enum name="small" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ProgressWheel">
+        <attr name="size" format="enum">
+            <enum name="large" value="0"/>
+            <enum name="small" value="1"/>
+        </attr>
+        <attr name="indeterminate" format="boolean" />
+        <attr name="matProg_barColor" format="color" />
+        <attr name="matProg_rimColor" format="color" />
+        <attr name="matProg_rimWidth" format="dimension" />
+        <attr name="matProg_spinSpeed" format="float" />
+        <attr name="matProg_barSpinCycleTime" format="integer" />
+        <attr name="matProg_fillRadius" format="boolean" />
+        <attr name="matProg_barWidth" format="dimension" />
+        <attr name="matProg_linearProgress" format="boolean" />
+    </declare-styleable>
+    
+    <declare-styleable name="DiamondView">
+        <attr name="backgroundAlpha" format="float" />
+        <attr name="backgroundColor" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CircularImageView">
+        <attr name="foregroundColor" format="integer" />
+    </declare-styleable>
+
+</resources>

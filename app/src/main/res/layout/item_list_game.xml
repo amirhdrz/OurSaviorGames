@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="32dp"
+    android:paddingLeft="@dimen/gridSize"
+    android:paddingRight="@dimen/gridSize"
+    >
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="@color/primaryDark"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                
+                <com.oursaviorgames.android.ui.widget.VideoView
+                    android:id="@+id/videoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <com.oursaviorgames.android.ui.widget.TagView
+                    android:id="@+id/tagView"
+                    app:edgeStyle="right_backward"
+                    android:visibility="gone"
+                    android:layout_gravity="bottom|left"
+                    android:layout_width="40dp"
+                    android:layout_height="16dp"
+                    />
+
+            </FrameLayout>
+
+            <FrameLayout
+                 android:clipToPadding="true"
+                 android:layout_width="match_parent"
+                 android:layout_height="80dp">
+
+                <com.oursaviorgames.android.ui.widget.RoboTextView
+                    android:id="@+id/gameTitle"
+                    android:layout_gravity="top|left"
+                    android:text="Game Title"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    app:fontStyle="medium"
+                    android:paddingTop="12dp"
+                    android:paddingLeft="24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <com.oursaviorgames.android.ui.widget.RoboTextView
+                    android:id="@+id/developerTitle"
+                    android:text="Developer Title"
+                    android:textColor="@color/paleWhite"
+                    android:textSize="12dp"
+                    android:layout_gravity="bottom|left"
+                    android:paddingLeft="24dp"
+                    android:paddingBottom="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <com.oursaviorgames.android.ui.widget.RoboTextView
+                    android:id="@+id/playCount"
+                    android:text="0000"
+                    android:textColor="@color/paleWhite"
+                    android:textSize="8dp"
+                    app:fontStyle="ocr_b"
+                    android:layout_gravity="top|right"
+                    android:paddingTop="20dp"
+                    android:paddingRight="24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_gravity="bottom|right"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/commentButton"
+                        style="@style/gameMenuButtonStyle"
+                        android:src="@drawable/ic_format_quote_white_24dp"
+                        />
+                    
+                    <View
+                        android:layout_width="8dp"
+                        android:layout_height="match_parent"
+                        />
+
+                    <ImageView
+                        android:id="@+id/shareButton"
+                        style="@style/gameMenuButtonStyle"
+                        android:src="@drawable/ic_more_horiz_white_24dp"
+                        />
+
+                    <View
+                        android:layout_width="8dp"
+                        android:layout_height="match_parent"
+                        />
+
+                    <ImageView
+                        android:id="@+id/favoriteButton"
+                        style="@style/gameMenuButtonStyle"
+                        android:src="@drawable/favorite_button_selector"
+                        />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>

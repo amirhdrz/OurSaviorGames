@@ -1,0 +1,79 @@
+<com.oursaviorgames.android.ui.widget.SmartRatioRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title"
+        android:text="@string/set_your_profile"
+        android:textSize="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        />
+
+    <com.oursaviorgames.android.ui.widget.ProfilePictureView
+        android:id="@+id/profilePictureView"
+        android:layout_width="144dp"
+        android:layout_height="144dp"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        />
+
+    <ImageView
+        android:id="@+id/profilePictureButton"
+        android:src="@drawable/ic_account_circle_white_24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/profilePictureView"
+        android:layout_alignBottom="@id/profilePictureView"
+        android:layout_marginEnd="-12dp"
+        />
+
+    <com.oursaviorgames.android.ui.widget.UsernameEditText
+        android:id="@+id/username"
+        style="@style/DarkEditTextStyle"
+        android:textSize="@dimen/stdTextSize"
+        android:hint="@string/username_hint"
+        android:textColorHint="@color/paleWhite"
+        android:textCursorDrawable="@drawable/text_cursor_white"
+        android:inputType="textNoSuggestions"
+        android:minWidth="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/profilePictureView"
+        android:layout_marginTop="16dp"
+        />
+
+    <com.oursaviorgames.android.ui.widget.ProgressBarSwitcher
+        android:id="@+id/okButtonSwitcher"
+        app:spinnerSize="small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="4dp"
+        >
+
+    <Button
+        android:id="@+id/okButton"
+        android:text="@string/done"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:textAllCaps="true"
+        android:background="@drawable/primary_button_background"
+        android:layout_width="100dp"
+        android:layout_height="36dp"
+        />
+
+    </com.oursaviorgames.android.ui.widget.ProgressBarSwitcher>
+</com.oursaviorgames.android.ui.widget.SmartRatioRelativeLayout>

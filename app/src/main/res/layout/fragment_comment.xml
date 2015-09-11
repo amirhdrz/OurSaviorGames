@@ -1,0 +1,103 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingTop="@dimen/activity_vertical_margin"
+              android:orientation="vertical"
+              android:descendantFocusability="beforeDescendants"
+              android:focusableInTouchMode="true"
+              tools:context="com.oursaviorgames.android.ui.CommentActivity.CommentFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/listView"
+            android:divider="@null"
+            android:requiresFadingEdge="vertical"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <LinearLayout
+            android:id="@+id/emptyView"
+            android:alpha="0.3"
+            android:layout_marginTop="116dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:src="@drawable/ic_format_quote_black_48dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.oursaviorgames.android.ui.widget.RoboTextView
+                app:fontStyle="regular"
+                android:textSize="16dp"
+                android:text="@string/empty_comment_list"
+                android:textColor="@color/black"
+                android:lineSpacingExtra="3dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="32dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/loadingView"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.oursaviorgames.android.external.materialishprogress.Spinner
+                app:size="large"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </FrameLayout>
+        
+    </FrameLayout>
+
+    <LinearLayout
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <EditText
+            android:id="@+id/commentEditText"
+            android:hint="@string/comment_edit_text_hint"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black20"
+            android:textCursorDrawable="@drawable/text_cursor_black"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:minHeight="56dp"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            >
+            <requestFocus/>
+        </EditText>
+
+        <ImageView
+            android:id="@+id/sendCommentButton"
+            android:src="@drawable/send_button"
+            android:scaleType="center"
+            android:layout_width="56dp"
+            android:layout_height="56dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
